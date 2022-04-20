@@ -13,7 +13,10 @@ let importeDos = 0;
 let gastoTotalUno = document.querySelector("#totalUno")
 let gastoTotalDos = document.querySelector("#totalDos")
 let resultadoDeuda = "";
-let modal = document.querySelector("#contenidoModa")
+let nombreDeudor = document.querySelector(".nombreDeudor")
+let persUno = document.querySelector("#personaUno")
+let persDos = document.querySelector("#personaDos")
+let montoDeuda = document.querySelector(".montoDeuda")
 
 
 class UI {
@@ -80,11 +83,12 @@ class UI {
 
     }
 
-    calcularDeuda(personaUno, personaDos) {
+    calcularDeuda(personaUno, personaDos, nombre) {
         let uno = parseInt(personaUno)
         let dos = parseInt(personaDos)
         resultadoDeuda = (uno - dos) / 2
-        modal.innerHTML = `<h3> La deuda es de $${resultadoDeuda}</h3>`
+        nombreDeudor.innerHTML = `${nombre.innerHTML}`
+        montoDeuda.innerHTML = resultadoDeuda
     }
 
 }
@@ -140,8 +144,8 @@ document.querySelector(".calcular").addEventListener('click', function (e) {
     const ui = new UI();
 
     if (parseInt(totalUno) > parseInt(totalDos)) {
-        ui.calcularDeuda(totalUno, totalDos)
+        ui.calcularDeuda(totalUno, totalDos, persDos)
     } else {
-        ui.calcularDeuda(totalDos, totalUno)
+        ui.calcularDeuda(totalDos, totalUno, persUno)
     }
 })

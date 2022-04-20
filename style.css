@@ -70,15 +70,12 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 .contenidoModal{
     background-color: #f78536;
+    text-align: center;
 }
 
 .mario{
     width: 300px;
     position: absolute;
     top: 20%;
-}
-
-.marioActivado{
-    display: block;
 }
 

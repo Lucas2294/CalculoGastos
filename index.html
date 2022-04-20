@@ -24,7 +24,7 @@
                 <div class="card cardUno">
                     <img src="img/man.jpg" class="card-img-top imgCard" alt="...">
                     <div class="card-body bodyUno">
-                        <h2 class="tituloCard">Persona 1</h2>
+                        <h2 class="tituloCard" id="personaUno">Persona 1</h2>
                         <form id="form_primer">
                             <div class="form-group formMB">
                                 <input type="text" id="name" placeholder="Gasto" class="form-control">
@@ -49,7 +49,7 @@
                 <div class="card cardDos">
                     <img src="img/man.jpg" class="card-img-top imgCard" alt="...">
                     <div class="card-body bodyDos">
-                        <h2 class="tituloCardDos">Persona 2</h2>
+                        <h2 class="tituloCardDos" id="personaDos">Persona 2</h2>
                         <form id="form_segundo">
                             <div class="form-group formMB">
                                 <input type="text" id="nameDos" placeholder="Gasto" class="form-control">
@@ -79,7 +79,8 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body" id="contenidoModa">
-                      
+                      <h3>La deuda que tiene que pagar <span class="nombreDeudor">  </span> es de:</h3>
+                      <h3 class="montoDeuda"></h3>
                     </div>
                   </div>
                 </div>
